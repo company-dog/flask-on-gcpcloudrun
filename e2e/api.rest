@@ -1,0 +1,26 @@
+@contentType = application/json
+
+### Create Todo
+# @name createTodo
+POST http://{{host}}:{{port}}/todos
+Content-Type: {{contentType}}
+
+{
+  "title": "go to bed at pm.9",
+  "completed": false
+}
+
+### Get Todo
+GET http://{{host}}:{{port}}/todo/{{createTodo.response.body.$.todo_id}}
+
+### Update Todo
+PUT http://{{host}}:{{port}}/todo/{{createTodo.response.body.$.todo_id}}
+Content-Type: {{contentType}}
+
+{
+  "title": "go to bed at pm.10",
+  "completed": true
+}
+
+### Delete Todo
+DELETE http://{{host}}:{{port}}/todo/{{createTodo.response.body.$.todo_id}}

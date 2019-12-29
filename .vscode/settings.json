@@ -1,0 +1,14 @@
+{
+  "python.pythonPath": ".venv/bin/python3.8",
+  "rest-client.environmentVariables": {
+    "$shared": {},
+    "local": {
+      "host": "localhost",
+      "port": "8080"
+    },
+    "container": {
+      "host": "localhost",
+      "port": "8888"
+    }
+  }
+}
