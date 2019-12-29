@@ -39,7 +39,7 @@ Content-Type: application/json
 DELETE /todo/<todo_id>
 ```
 
-## Deploy to CodeRun using CloudBuild
+## Manual Deploy to CodeRun using CloudBuild
 
 以下有効にする必要がある。
 
@@ -47,11 +47,5 @@ DELETE /todo/<todo_id>
 - CloudBuild からの CloudRun 実行
 
 ```
-
 gcloud builds submit --config cloudbuild.yaml
-
-```
-
-```
-
 ```
