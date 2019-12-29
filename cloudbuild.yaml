@@ -1,4 +1,8 @@
 steps:
+  # get serviceAccountKey from bucket
+  - name: gcr.io/cloud-builders/gsutil
+    args: ["cp", "gs://flask-coderun-bucket/key.json", "key.json"]
+
   # build & push the container image
   - name: "gcr.io/kaniko-project/executor:latest"
     args:
@@ -7,7 +11,7 @@ steps:
         "--cache-ttl=48h",
         "--destination=gcr.io/$PROJECT_ID/todo:latest",
       ]
-    # Deploy container image to Cloud Run
+  # Deploy container image to Cloud Run
   - name: "gcr.io/cloud-builders/gcloud"
     args:
       [
