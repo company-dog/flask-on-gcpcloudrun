@@ -4,6 +4,11 @@
 
 ## Deploy to CodeRun using CloudBuild
 
+以下有効にする必要がある。
+
+- CloudRun API
+- CloudBuild からの CloudRun 実行
+
 ```
 gcloud builds submit --config cloudbuild.yaml
 ```
