@@ -3,12 +3,13 @@
   "rest-client.environmentVariables": {
     "$shared": {},
     "local": {
-      "host": "localhost",
-      "port": "8080"
+      "url": "http://localhost:8080"
     },
     "container": {
-      "host": "localhost",
-      "port": "8888"
+      "url": "http://localhost:8888"
+    },
+    "cloudrun": {
+      "url": "https://todo-nn2sohgv5a-an.a.run.ap"
     }
   }
 }
